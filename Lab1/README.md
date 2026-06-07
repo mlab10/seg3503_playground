@@ -1,5 +1,3 @@
-# seg3503_playground
-Répertoire pour le cours d'assurance qualité logiciel
 # Lab 1
 Je travail avec Windows 11 comme système d’exploitation, si vous avez un autre système d’exploitation les instructions peuvent variées. J’utilise Powershell comme terminal.
 ## Java/JUnit
