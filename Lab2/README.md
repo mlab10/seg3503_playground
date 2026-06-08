@@ -11,14 +11,14 @@ Ensuite, visiter http://localhost:8080/
 
 | Cas de test | Résultats Escomptés | Résultats Actuels | Verdict (Succès, Échec, Non-concluant)| 
 | --- | ----------- | --- | --- |
-| 1 | Text | 2 images | Succès/Échec/Non-concluant|
-| 2 | Text | 2 images | Succès/Échec/Non-concluant|
-| 3 | Text | 2 images | Succès/Échec/Non-concluant|
-| 4 | Text | 2 images | Succès/Échec/Non-concluant|
-| 5 | Text | 2 images | Succès/Échec/Non-concluant|
-| 6 | Text | 2 images | Succès/Échec/Non-concluant|
-| 7 | Text | 2 images | Succès/Échec/Non-concluant|
-| 8 | Text | 2 images | Succès/Échec/Non-concluant|
+| 1 | Accepté | ![alt text](SEG3503Lab2Exercice1TestCase1.jpg)![alt text](SEG3503Lab2Exercice1TestCase1Sucess.jpg) | Succès|
+| 2 | Accepté |![alt text](SEG3503Lab2Exercice1TestCase2.jpg)![alt text](SEG3503Lab2Exercice1TestCase2Sucess.jpg) | Succès|
+| 3 |  Accepté |![alt text](SEG3503Lab2Exercice1TestCase3.jpg)![alt text](SEG3503Lab2Exercice1TestCase3Sucess.jpg) | Succès|
+| 4 | Wrong postal code format | Wrong postal code format and age is mandatory ![alt text](SEG3503Lab2Exercice1TestCase4.jpg)| Échec|
+| 5 | Wrong postal code format | ![alt text](SEG3503Lab2Exercice1TestCase5.jpg) | Succès|
+| 6 | Age is mandatory | ![alt text](SEG3503Lab2Exercice1TestCase6.jpg) | Succès|
+| 7 | Size of user name error | ![Image of test case 8 wrong Username format error](SEG3503Lab2Exercice1TestCase7.jpg) | Succès|
+| 8 | Wrong user name format error | ![Image of test case 8 wrong Username format error](SEG3503Lab2Exercice1TestCase8.jpg) | Succès|
 
 ## JUnit Parameterized Runner
 ---
