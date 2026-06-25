@@ -2,6 +2,8 @@ package tic;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.beans.Transient;
+
 import org.junit.jupiter.api.Test;
 
 class TicTest {
@@ -11,5 +13,11 @@ class TicTest {
 		Tic board = new Tic(4, 4);
 		Tic board2 = new Tic(3, 5);
 		assertFalse(board.boardsEqual(board2.board));
+	}
+
+	@Test
+	void cellEmptyTest() {
+		Tic board = new Tic(4, 4);
+		assertFalse(board.cellEmpty(board.board, 5, 0));
 	}
 }

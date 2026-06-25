@@ -50,5 +50,17 @@ public class Tic {
 		return true;
 	}
 
+	public boolean cellsEqual(String[][] board2, int row, int col) {
+		if(board[row][col].equals(board2[row][col])) {
+			return true;
+		}
+		return false;
+	}
+
+	public boolean cellEmpty(String[][] board, int row, int col) {
+		return board[row][col].equals("_");
+	}
+
+
 
 }
