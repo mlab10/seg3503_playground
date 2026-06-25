@@ -5,6 +5,8 @@ public class Tic {
 	int rows;
 	int cols;
 	String turn;
+
+	//Constructor
 	public Tic(int row, int col) {
 		board = new String[row][col];
 		rows = row;
@@ -16,4 +18,17 @@ public class Tic {
 			}
 		}
 	}
+	
+	public boolean boardsEqual(String[][] board1, String[][] board2) {
+		for(int i = 0; i < rows; i++) {
+			for(int j = 0; j < cols; j++) {
+				if(!board1[i][j].equals(board2[i][j])) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
+
 }
