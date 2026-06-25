@@ -20,6 +20,11 @@ public class Tic {
 	}
 	
 	public boolean boardsEqual(String[][] board1, String[][] board2) {
+
+		if(board1.length != board2.length || board1[0].length != board2[0].length) {
+			return false;
+		}
+
 		for(int i = 0; i < rows; i++) {
 			for(int j = 0; j < cols; j++) {
 				if(!board1[i][j].equals(board2[i][j])) {
