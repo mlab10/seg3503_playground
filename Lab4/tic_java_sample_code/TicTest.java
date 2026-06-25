@@ -18,6 +18,7 @@ class TicTest {
 	@Test
 	void cellEmptyTest() {
 		Tic board = new Tic(4, 4);
-		assertFalse(board.cellEmpty(board.board, 5, 0));
+		board.board[4][4] = "X";
+		assertFalse(board.cellEmpty(board.board, 4, 4));
 	}
 }
