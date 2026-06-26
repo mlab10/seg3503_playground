@@ -58,7 +58,7 @@ public class Tic {
 	}
 
 	public boolean cellEmpty(String[][] board, int row, int col) {
-		return board[row][col].equals("_");
+		return board[row-1][col-1].equals("_");
 	}
 
 
