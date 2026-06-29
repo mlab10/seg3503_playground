@@ -61,6 +61,12 @@ public class Tic {
 		return board[row-1][col-1].equals("_");
 	}
 
+	public void placeX(String[][] board, int row, int col) {
+		if (cellEmpty(board, row, col)) {
+			board[row][col] = turnX;
+		}
+	}
+
 
 
 }

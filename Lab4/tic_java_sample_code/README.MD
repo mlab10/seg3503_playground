@@ -1,4 +1,7 @@
 |Nom des commit|Numéros des commits|Descriptions|
 |-|-|-|
 |boardEquals test fails, boardEquals pass2|9f5586b93145415bfa0fad001fa5c381182fa7c3, da1278b2581f76dffc735f0e3d6d4e443975a6ae|Dans ce groupe, je vérifie si les tableaux sont égals. J’ai penséé vérifier si les valeurs dans chacune des cellules étaient les même et non si les tableaux sont égaux donc j'ai créé une méthode pour vérifier si les tableaux sont de même taille. Test:![alt text](Images/SEG3503Lab4boardsEqualTest.jpg) Implémentation: ![alt text](Images/SEG3503Lab4boardsEqualpass.jpg)|
-|cellEmpty test fail, cellEmpty pass|-|Vérifie si une cellule est vide ou pas. Quand le tableau est créé, tous les cellules sont "_" donc la méthode vérifie si une cellule est "_". Mon premier test a échoué parce qu'il vérifie une cellule hors du tableau (index out of bounds).|
+|cellEmpty test fail, cellEmpty pass|9d0dd7147eaa614da1d5f4fa9d795054ef67d1de, f626fe2dd0fc869b4584373d7414d7c7a7eeb728|Vérifie si une cellule est vide ou pas. Quand le tableau est créé, tous les cellules sont "_" donc la méthode vérifie si une cellule est "_". Mon premier test a échoué parce qu'il vérifie une cellule hors du tableau (index out of bounds). Test:![alt text](Images/SEG3503Lab4cellEmptylTest.jpg) Implémentation: ![alt text](Images/SEG3503Lab4cellEmptypass.jpg) |
+|PlaceX test fails, PlaceX pass|-|Mettre un X dans une cellule vide. Test: Implémentation:|
+|-|-|-|
+|-|-|-|

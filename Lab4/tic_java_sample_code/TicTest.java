@@ -21,4 +21,11 @@ class TicTest {
 		board.board[3][3] = "X";
 		assertFalse(board.cellEmpty(board.board, 4, 4));
 	}
+
+	@Test
+	void PlaceXTest() {
+		Tic board = new Tic(4, 4);
+		board.placeX(board.board, 2, 2);
+		assertEquals("X", board.board[1][1]);
+	}
 }
