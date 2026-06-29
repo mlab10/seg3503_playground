@@ -6,6 +6,7 @@ public class Tic {
 	int cols;
 	String turnX;
 	String turnO;
+	String currentTurn;
 
 	//Constructor
 	public Tic(int row, int col) {
@@ -14,7 +15,7 @@ public class Tic {
 		cols = col;
 		turnO = "O";
 		turnX = "X";
-		String currentTurn = turnX; // Always start with X
+		currentTurn = turnX; // Always start with X
 		for(int i = 0; i<row; i++) {
 			for(int j = 0; j<col; j++) {
 				board[i][j] = "_";
@@ -40,12 +41,14 @@ public class Tic {
 	public void placeX(String[][] board, int row, int col) {
 		if (cellEmpty(board, row, col)) {
 			board[row-1][col-1] = turnX;
+			switchTurn();
 		}
 	}
 
 	public void placeO(String[][] board, int row, int col) {
 		if (cellEmpty(board, row, col)) {
 			board[row-1][col-1] = turnO;
+			switchTurn();
 		}
 	}
 
