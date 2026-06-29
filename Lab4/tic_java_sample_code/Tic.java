@@ -63,7 +63,7 @@ public class Tic {
 
 	public void placeX(String[][] board, int row, int col) {
 		if (cellEmpty(board, row, col)) {
-			board[row][col] = turnX;
+			board[row-1][col-1] = turnX;
 		}
 	}
 
