@@ -139,6 +139,44 @@ public class Tic {
 			}
 		}
 
+		// Check diagonal if board is square
+		if(rows == cols) {
+
+			// Main diagonal
+       	 		String first = board[0][0];
+
+				if (!first.equals("_")) {
+					boolean win = true;
+
+					for (int i = 1; i < rows; i++) {
+						if (!board[i][i].equals(first)) {
+							win = false;
+							break;
+						}
+					}
+
+					if (win) { return first; }
+				}
+
+        	// Secondary diagonal
+        	first = board[0][cols - 1];
+
+				if (!first.equals("_")) {
+					boolean win = true;
+
+					for (int i = 1; i < rows; i++) {
+						if (!board[i][cols - 1 - i].equals(first)) {
+							win = false;
+							break;
+						}
+					}
+
+					if (win) {
+						return first;
+					}
+				}
+			}
+
 		return false;
 	}
 
