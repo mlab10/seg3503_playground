@@ -111,13 +111,36 @@ public class Tic {
 
 	//Method to switch turns
 	private void switchTurn() {
-    if (currentTurn.equals(turnX)) {
-        currentTurn = turnO;
-    } 
-	else {
-        currentTurn = turnX;
-    }
-}
+		if (currentTurn.equals(turnX)) {
+			currentTurn = turnO;
+		} 
+		else {
+			currentTurn = turnX;
+		}
+	}
+
+	/**
+	 * Method to check if there is a winner
+	 * @param board
+	 * @return
+	 */
+	public boolean winner(String[][] board) {
+		// Check rows
+		for(int i = 0; i < rows; i++) {
+			if(!board[i][0].equals("_") && board[i][0].equals(board[i][1]) && board[i][1].equals(board[i][2])) {
+				return true;
+			}
+		}
+
+		// Check columns
+		for(int j = 0; j < cols; j++) {
+			if(!board[0][j].equals("_") && board[0][j].equals(board[1][j]) && board[1][j].equals(board[2][j])) {
+				return true;
+			}
+		}
+
+		return false;
+	}
 
 
 	/**
@@ -133,18 +156,12 @@ public class Tic {
 	}
 
 	public static void main(String[] args) {
-		Tic board = new Tic(4, 4);
-		int k = 0;
-		for(int i = 0; i < board.rows; i++) {
-			for(int j = 0; j < board.cols; j++) {
-				k++;
-				if (k % 2 == 0) {
-					board.placeO(board.board, i+1, j+1);
-				} else {
-					board.placeX(board.board, i+1, j+1);
-				}
-			}
-		}
+		Tic board = new Tic(3, 3);
+		board.placeX(board.board, 1, 1);
+		board.placeO(board.board, 2, 1);
+		board.placeX(board.board, 2, 2);
+		board.placeO(board.board, 2, 3);
+		board.placeX(board.board, 3, 3);
 		board.printBoard();
 	}
 

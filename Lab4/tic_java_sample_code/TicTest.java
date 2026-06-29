@@ -36,4 +36,15 @@ class TicTest {
 		assertEquals("O", Coolio.getTurn());
 	}
 
+	@Test
+	void winnerTest() {
+		Tic board = new Tic(3, 3);
+		board.placeX(board.board, 1, 1);
+		board.placeO(board.board, 2, 1);
+		board.placeX(board.board, 2, 2);
+		board.placeO(board.board, 2, 3);
+		board.placeX(board.board, 3, 3);
+		assertTrue(board.winner(board.board));
+	}
+
 }
