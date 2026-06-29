@@ -28,4 +28,12 @@ class TicTest {
 		board.placeX(board.board, 2, 2);
 		assertEquals("X", board.board[1][1]);
 	}
+
+	@Test
+	void turnTest() {
+		Tic Coolio = new Tic(4, 4);
+		Coolio.placeX(Coolio.board, 2, 2);
+		assertEquals("O", Coolio.getTurn());
+	}
+
 }
