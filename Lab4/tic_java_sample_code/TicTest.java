@@ -44,7 +44,7 @@ class TicTest {
 		board.placeX(board.board, 2, 2);
 		board.placeO(board.board, 2, 3);
 		board.placeX(board.board, 3, 3);
-		assertTrue(board.winner(board.board));
+		assertEquals("X", board.winner(board.board));
 	}
 
 }

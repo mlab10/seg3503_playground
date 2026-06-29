@@ -124,60 +124,93 @@ public class Tic {
 	 * @param board
 	 * @return
 	 */
-	public boolean winner(String[][] board) {
+	public String winner(String [][] board) {
+
 		// Check rows
-		for(int i = 0; i < rows; i++) {
-			if(!board[i][0].equals("_") && board[i][0].equals(board[i][1]) && board[i][1].equals(board[i][2])) {
-				return true;
+		for (int i = 0; i < rows; i++) {
+			String first = board[i][0];
+
+			if (first.equals("_")) {
+				continue;
+			}
+
+			boolean win = true;
+
+			for (int j = 1; j < cols; j++) {
+				if (!board[i][j].equals(first)) {
+					win = false;
+					break;
+				}
+			}
+
+			if (win) {
+				return first;
 			}
 		}
 
 		// Check columns
-		for(int j = 0; j < cols; j++) {
-			if(!board[0][j].equals("_") && board[0][j].equals(board[1][j]) && board[1][j].equals(board[2][j])) {
-				return true;
+		for (int j = 0; j < cols; j++) {
+			String first = board[0][j];
+
+			if (first.equals("_")) {
+				continue;
+			}
+
+			boolean win = true;
+
+			for (int i = 1; i < rows; i++) {
+				if (!board[i][j].equals(first)) {
+					win = false;
+					break;
+				}
+			}
+
+			if (win) {
+				return first;
 			}
 		}
 
-		// Check diagonal if board is square
-		if(rows == cols) {
+		// Only square boards have diagonals
+		if (rows == cols) {
 
 			// Main diagonal
-       	 		String first = board[0][0];
+			String first = board[0][0];
 
-				if (!first.equals("_")) {
-					boolean win = true;
+			if (!first.equals("_")) {
+				boolean win = true;
 
-					for (int i = 1; i < rows; i++) {
-						if (!board[i][i].equals(first)) {
-							win = false;
-							break;
-						}
+				for (int i = 1; i < rows; i++) {
+					if (!board[i][i].equals(first)) {
+						win = false;
+						break;
 					}
-
-					if (win) { return first; }
 				}
 
-        	// Secondary diagonal
-        	first = board[0][cols - 1];
-
-				if (!first.equals("_")) {
-					boolean win = true;
-
-					for (int i = 1; i < rows; i++) {
-						if (!board[i][cols - 1 - i].equals(first)) {
-							win = false;
-							break;
-						}
-					}
-
-					if (win) {
-						return first;
-					}
+				if (win) {
+					return first;
 				}
 			}
 
-		return false;
+			// Secondary diagonal
+			first = board[0][cols - 1];
+
+			if (!first.equals("_")) {
+				boolean win = true;
+
+				for (int i = 1; i < rows; i++) {
+					if (!board[i][cols - 1 - i].equals(first)) {
+						win = false;
+						break;
+					}
+				}
+
+				if (win) {
+					return first;
+				}
+			}
+		}
+
+		return "_";
 	}
 
 
